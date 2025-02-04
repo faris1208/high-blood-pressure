@@ -6,14 +6,10 @@ import big from "../../../../public/assets/images/Diabetes-big.png";
 import jack from "../../../../public/assets/images/jack.jpg";
 import fidelis from "../../../../public/assets/images/fidelis.jpg";
 import sarah from "../../../../public/assets/images/sarah.jpg";
-import stars from "../../../../public/assets/images/stars.svg";
+import stars from "../../../../public/assets/images/five-stars.svg";
 import bottles from "../../../../public/assets/images/Diabetes-bottles.png";
-import natural from "../../../../public/assets/images/Diabetes-natural.png";
-import one from "../../../../public/assets/images/istockphoto-1.jpg";
-import two from "../../../../public/assets/images/istockphoto-2.jpg";
-import three from "../../../../public/assets/images/istockphoto-3.jpg";
-import rita from "../../../../public/assets/images/rita.jpg";
-import anita from "../../../../public/assets/images/anita.jpg";
+
+
 
 
 import Link from "next/link";
@@ -35,6 +31,13 @@ import heart from "../../../../public/assets/images/heart.gif";
 import autistic from "../../../../public/assets/images/autistic.png";
 import tree from "../../../../public/assets/images/tree.png";
 import lasuna from "../../../../public/assets/images/lasuna.png";
+import chioma from "../../../../public/assets/images/chioma.jpg";
+import ife from "../../../../public/assets/images/ife.jpg";
+import ken from "../../../../public/assets/images/ken.jpg";
+import ola from "../../../../public/assets/images/ola.jpg";
+import stella from "../../../../public/assets/images/stella.jpg";
+import simon from "../../../../public/assets/images/simon.jpg";
+
 
 export default function LandingPage() {
   const [openId, setOpenId] = useState(null);
@@ -46,43 +49,38 @@ export default function LandingPage() {
   const accordionData = [
     {
       id: 1,
-      content: "Is Madhuhara NAFDAC Approved?",
-      answer:
-        "Yes, Madhuhara is NAFDAC approved, meaning it has been thoroughly tested and certified as safe and effective for use.",
-    },
-    {
-      id: 2,
       content: "Can it really reverse diabetes? ",
       answer:
         "Yes. It works by stabilizing blood sugar levels, repairing damaged cells, and supporting your body’s natural healing process.",
+        text: "Unlike random “agbo” mixtures, this is a clinically tested and proven natural solution.",
+        show: "Plus, many Nigerians are already seeing results.",
+    },
+    {
+      id: 2,
+      content: "Does it have any side effects? ",
+      answer:
+        "Unlike other BP drugs that can cause you dizziness, weakness, or constant urination…",
+        text: "Arjuna & Lasuna works naturally with your body to lower BP without harsh side effects.",
+        show: "It supports your heart and cleans your arteries instead of forcing your BP down unnaturally.",
     },
     {
       id: 3,
-      content: "Does it have any side effects?",
+      content: "How do I know this is not a scam?",
       answer:
-        "No. It’s made from 100% natural ingredients with no harmful chemicals or side effects.",
+        "We completely understand your concern.",
+        text: "That’s why we offer cash on delivery anywhere in Nigeria, you only pay when you receive your order.",
+        show: "Plus, we have thousands of happy customers who have seen real results.",
     },
+    
     {
       id: 4,
-      content: "How long will it take to see results?",
-      answer: "Results vary depending on the individual.",
+      content: "But N60,000 is too expensive for me.",
+      answer: "From hospital visits, expensive drugs every month, or even stroke treatment costing over ₦2 million.",
       text: "But 75% of our customers notice improvements in their energy levels and sugar control within 2–4 weeks.",
-      show: "We recommend using it for at least 2–3 months for BEST results",
+      show: "Wouldn’t you rather invest ₦60k now and avoid those future costs?",
+      last: "Plus, we offer a money-back guarantee, so there’s zero risk for you.",
     },
-    {
-      id: 5,
-      content:
-        "Can I stop taking my diabetes medications after using Madhuhara?",
-      answer:
-        "Always consult your doctor before stopping any prescribed medications.",
-    },
-    {
-      id: 6,
-      content:
-        "I don't have all the money right now, can I order and pay on delivery?",
-      answer:
-        "Yes. You can order, now and pay on delivery, the day you will be ready",
-    },
+  
   ];
 
   const accordionRef = useRef(null);
@@ -324,7 +322,7 @@ export default function LandingPage() {
               </div>
               <div className={styles.last_content}>
                 <Image
-                  src={fidelis}
+                  src={chioma}
                   alt="whatsapp"
                   width={200}
                   height={100}
@@ -347,7 +345,7 @@ export default function LandingPage() {
               </div>
               <div className={styles.last_content}>
                 <Image
-                  src={sarah}
+                  src={ife}
                   alt="whatsapp"
                   width={200}
                   height={100}
@@ -392,11 +390,11 @@ export default function LandingPage() {
                     className={styles.stars_img}
                   />
                 </div>
-                <p>“My BP Is In Normal Range”</p>
+                <p>“It’s Very Effective”</p>
               </div>
               <div className={styles.last_content}>
                 <Image
-                  src={fidelis}
+                  src={ken}
                   alt="whatsapp"
                   width={200}
                   height={100}
@@ -415,11 +413,11 @@ export default function LandingPage() {
                     className={styles.stars_img}
                   />
                 </div>
-                <p>“It&apos;s a Lifesaver”</p>
+                <p>“Arjuna has changed everything”</p>
               </div>
               <div className={styles.last_content}>
                 <Image
-                  src={sarah}
+                  src={ola}
                   alt="whatsapp"
                   width={200}
                   height={100}
@@ -468,7 +466,7 @@ export default function LandingPage() {
               </div>
               <div className={styles.last_content}>
                 <Image
-                  src={fidelis}
+                  src={stella}
                   alt="whatsapp"
                   width={200}
                   height={100}
@@ -491,7 +489,7 @@ export default function LandingPage() {
               </div>
               <div className={styles.last_content}>
                 <Image
-                  src={sarah}
+                  src={simon}
                   alt="whatsapp"
                   width={200}
                   height={100}
@@ -761,7 +759,7 @@ export default function LandingPage() {
         </div>
         <div className={styles.accordion_wrapper}>
           <div className={styles.accordion}>
-            {accordionData.map(({ id, answer, content, text, show }) => (
+            {accordionData.map(({ id, answer, content, text, show, last }) => (
               <div key={id} className={styles.accordion_item}>
                 <button
                   className={styles.accordion_header}
@@ -783,6 +781,7 @@ export default function LandingPage() {
                     <p>{answer}</p>
                     <p>{text}</p>
                     <p>{show}</p>
+                    <p>{last}</p>
                   </div>
                 )}
               </div>
