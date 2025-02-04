@@ -9,9 +9,6 @@ import sarah from "../../../../public/assets/images/sarah.jpg";
 import stars from "../../../../public/assets/images/five-stars.svg";
 import bottles from "../../../../public/assets/images/Diabetes-bottles.png";
 
-
-
-
 import Link from "next/link";
 import styles from "../homepage/styles.module.scss";
 import { FaCaretDown } from "react-icons/fa";
@@ -37,7 +34,7 @@ import ken from "../../../../public/assets/images/ken.jpg";
 import ola from "../../../../public/assets/images/ola.jpg";
 import stella from "../../../../public/assets/images/stella.jpg";
 import simon from "../../../../public/assets/images/simon.jpg";
-
+import SniperCrmForm from "./sniper";
 
 export default function LandingPage() {
   const [openId, setOpenId] = useState(null);
@@ -52,35 +49,34 @@ export default function LandingPage() {
       content: "Can it really reverse diabetes? ",
       answer:
         "Yes. It works by stabilizing blood sugar levels, repairing damaged cells, and supporting your body’s natural healing process.",
-        text: "Unlike random “agbo” mixtures, this is a clinically tested and proven natural solution.",
-        show: "Plus, many Nigerians are already seeing results.",
+      text: "Unlike random “agbo” mixtures, this is a clinically tested and proven natural solution.",
+      show: "Plus, many Nigerians are already seeing results.",
     },
     {
       id: 2,
       content: "Does it have any side effects? ",
       answer:
         "Unlike other BP drugs that can cause you dizziness, weakness, or constant urination…",
-        text: "Arjuna & Lasuna works naturally with your body to lower BP without harsh side effects.",
-        show: "It supports your heart and cleans your arteries instead of forcing your BP down unnaturally.",
+      text: "Arjuna & Lasuna works naturally with your body to lower BP without harsh side effects.",
+      show: "It supports your heart and cleans your arteries instead of forcing your BP down unnaturally.",
     },
     {
       id: 3,
       content: "How do I know this is not a scam?",
-      answer:
-        "We completely understand your concern.",
-        text: "That’s why we offer cash on delivery anywhere in Nigeria, you only pay when you receive your order.",
-        show: "Plus, we have thousands of happy customers who have seen real results.",
+      answer: "We completely understand your concern.",
+      text: "That’s why we offer cash on delivery anywhere in Nigeria, you only pay when you receive your order.",
+      show: "Plus, we have thousands of happy customers who have seen real results.",
     },
-    
+
     {
       id: 4,
       content: "But N60,000 is too expensive for me.",
-      answer: "From hospital visits, expensive drugs every month, or even stroke treatment costing over ₦2 million.",
+      answer:
+        "From hospital visits, expensive drugs every month, or even stroke treatment costing over ₦2 million.",
       text: "But 75% of our customers notice improvements in their energy levels and sugar control within 2–4 weeks.",
       show: "Wouldn’t you rather invest ₦60k now and avoid those future costs?",
       last: "Plus, we offer a money-back guarantee, so there’s zero risk for you.",
     },
-  
   ];
 
   const accordionRef = useRef(null);
@@ -99,8 +95,8 @@ export default function LandingPage() {
       <div className={styles.doctors_wrapper}>
         <div className={styles.doctors_conatainer}>
           <h2>
-            Why Are Doctors In India Recommending <span>Arjuna Bark</span> To Treat
-            Hypertension?
+            Why Are Doctors In India Recommending <span>Arjuna Bark</span> To
+            Treat Hypertension?
           </h2>
           <div className={styles.blood_pressure}>
             <Image
@@ -113,8 +109,8 @@ export default function LandingPage() {
           </div>
           <div className={styles.blood_pressure_contents}>
             <p>
-              Hi, my name is Dr. Chijioke, and if you&apos;re dealing <strong>with
-              constant High Blood Pressure</strong>
+              Hi, my name is Dr. Chijioke, and if you&apos;re dealing{" "}
+              <strong>with constant High Blood Pressure</strong>
             </p>
             <b>You may be wondering…</b>
             <div className={styles.blood_pressure_button}>
@@ -180,8 +176,14 @@ export default function LandingPage() {
             <p>
               <span>There&apos;s a New, natural, and effective way to…</span>
             </p>
-            <p><strong>Flush out bad cholesterol from your blood and arteries</strong></p>
-            <p><strong>While lowering your BP to a healthy range.</strong></p>
+            <p>
+              <strong>
+                Flush out bad cholesterol from your blood and arteries
+              </strong>
+            </p>
+            <p>
+              <strong>While lowering your BP to a healthy range.</strong>
+            </p>
             <b>
               <span>It&apos;s called</span> Arjuna Bark
             </b>
@@ -522,7 +524,7 @@ export default function LandingPage() {
                   <span>2 Packs </span>
                 </p>
               </div>
-              <div ref={accordionRef} className={styles.last_content}>
+              <div className={styles.last_content}>
                 <Image
                   src={Arjunaa}
                   alt="whatsapp"
@@ -641,10 +643,14 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
+
       <section className={styles.howmuch_container}>
         <div className={styles.howmuch_contents}>
-          <div className={styles.hero_two_text}>
+          <div  ref={accordionRef} className={styles.hero_two_text}>
             <h3>Fill The Form Below To Order Now</h3>
+          </div>
+          <div className={styles.sniper}>
+            <SniperCrmForm />
           </div>
           <div className={styles.big_image_wrapper}>
             <div className={styles.big_image}>
@@ -708,7 +714,6 @@ export default function LandingPage() {
                   className={styles.whatsapp}
                 />
               </div>
-             
             </div>
             <div className={styles.whatsapp_img}>
               <div className={styles.stars_box}>
@@ -721,9 +726,7 @@ export default function LandingPage() {
                     className={styles.stars_img}
                   />
                 </div>
-                <p>
-                “My BP don dey stable now”
-                </p>
+                <p>“My BP don dey stable now”</p>
               </div>
               <div className={styles.last_content}>
                 <Image
@@ -735,19 +738,23 @@ export default function LandingPage() {
                 />
               </div>
               <div className={styles.customer_review}>
-              <p>
-                  “I no believe say natural product fit work. <span>But na Arjuna and
-                  Lasuna change my mind. My BP wey no dey ever come down, na im
-                  dey stable now.</span> God bless whoever bring this thing come
-                  Nigeria.”
+                <p>
+                  “I no believe say natural product fit work.{" "}
+                  <span>
+                    But na Arjuna and Lasuna change my mind. My BP wey no dey
+                    ever come down, na im dey stable now.
+                  </span>{" "}
+                  God bless whoever bring this thing come Nigeria.”
                 </p>
-                <p><span>~Mr. Fred, Enugu.</span></p>
+                <p>
+                  <span>~Mr. Fred, Enugu.</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div className={styles.click_wrapper}>
         <div onClick={scrollToAccordion} className={styles.click_button}>
           <button>Click Here To Order Now</button>
