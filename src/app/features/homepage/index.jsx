@@ -1,13 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import diabetes from "../../../../public/assets/images/Diabetes-Offer-1.png";
-import big from "../../../../public/assets/images/Diabetes-big.png";
-import jack from "../../../../public/assets/images/jack.jpg";
-import fidelis from "../../../../public/assets/images/fidelis.jpg";
-import sarah from "../../../../public/assets/images/sarah.jpg";
 import stars from "../../../../public/assets/images/five-stars.svg";
-import bottles from "../../../../public/assets/images/Diabetes-bottles.png";
 
 import Link from "next/link";
 import styles from "../homepage/styles.module.scss";
@@ -79,11 +73,17 @@ export default function LandingPage() {
     },
   ];
 
-  const accordionRef = useRef(null);
+  const accordionRef1 = useRef(null);
+  const accordionRef2 = useRef(null);
 
   const scrollToAccordion = () => {
-    accordionRef.current?.scrollIntoView({ behavior: "smooth" });
+    accordionRef1.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const scrollToAccordion2 = () => {
+    accordionRef2.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
 
   return (
     <div className={styles.wrapper}>
@@ -518,7 +518,7 @@ export default function LandingPage() {
         <div className={styles.customer_saying_contents}>
           <h2>Order 4 Packs or 6 Packs For BEST Results.</h2>
           <div className={styles.whatsapp_images}>
-            <div className={styles.whatsapp_img}>
+            <div ref={accordionRef1} className={styles.whatsapp_img}>
               <div className={styles.stars_box}>
                 <p>
                   <span>2 Packs </span>
@@ -543,17 +543,11 @@ export default function LandingPage() {
                     <p>PAY ON DELIVERY</p>
                   </div>
                   <div className={styles.order_now}>
-                    <Link
-                      href={
-                        "https://isdb.bpfree.xyz/joyfulwellness/madhu/order-page/index.html"
-                      }
-                    >
-                      <button>
+                      <button  onClick={scrollToAccordion2}>
                         <div className={styles.order_now_div}>
                           <p>ORDER NOW</p>
                         </div>
                       </button>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -584,17 +578,11 @@ export default function LandingPage() {
                     <p>PAY ON DELIVERY</p>
                   </div>
                   <div className={styles.order_now}>
-                    <Link
-                      href={
-                        "https://isdb.bpfree.xyz/joyfulwellness/madhu/order-page/index.html"
-                      }
-                    >
-                      <button>
+                      <button onClick={scrollToAccordion2}>
                         <div className={styles.order_now_div}>
                           <p>ORDER NOW</p>
                         </div>
                       </button>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -625,17 +613,11 @@ export default function LandingPage() {
                     <p>PAY ON DELIVERY</p>
                   </div>
                   <div className={styles.order_now}>
-                    <Link
-                      href={
-                        "https://isdb.bpfree.xyz/joyfulwellness/madhu/order-page/index.html"
-                      }
-                    >
-                      <button>
+                      <button onClick={scrollToAccordion2}>
                         <div className={styles.order_now_div}>
                           <p>ORDER NOW</p>
                         </div>
                       </button>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -646,7 +628,7 @@ export default function LandingPage() {
 
       <section className={styles.howmuch_container}>
         <div className={styles.howmuch_contents}>
-          <div  ref={accordionRef} className={styles.hero_two_text}>
+          <div  ref={accordionRef2} className={styles.hero_two_text}>
             <h3>Fill The Form Below To Order Now</h3>
           </div>
           <div className={styles.sniper}>
